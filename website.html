@@ -12,23 +12,23 @@ body {
 }
 
 div {
-  background-color: Gold;
+  background-color: #ffcc00;
 }
 
 		</style>
 	</head>
 	<body>
-            <h1 align="center"> Data Report By Zhuoyuan Ren</h1>
+            <h1 align="center", style="color:white;"> Data Report By Zhuoyuan Ren</h1>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code/modules/exporting.js"></script>
 <script src="https://code/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
-<div style="min-width: 310px; max-width: 800px; height: 130px; margin: 0 auto">
-Dear CEO,
-<p>My team have finished data visualizations and analysis you desired below. We have figured out the impact potentially caused by
+<div style="min-width: 310px; max-width: 800px; height: 160px; margin: 0 auto">
+<font color="white">Dear CEO, </font>
+<p style="color:white;">My team have finished data visualizations and analysis you desired below. We have figured out the impact potentially caused by
     BurgerKing's Impossible Burger in the last October and also we have some valuable insights McDonald's can benefit from.
 </p>
-<a href="report.pdf" download>Click Me to Download a PDF Version of The Following Report</a >
+<a href="report_for_ceo.pdf" download>Click Me to Download a PDF Version of The Following Report</a >
 </div>
         
         <pre id="csv" style="display:none">"Month, Year",NE,SW,NW,SE,C,Total
@@ -253,14 +253,14 @@ Dear CEO,
         </script>   
 
 <div style="min-width: 310px; max-width: 800px; height: 200px; margin: 0 auto">
-        First Let's see how Monthly Sales changed over time since January 2016. 
-    <p>We can obviously find a huge decrease in monthly Sales
+    <font color="white">First Let's see how Monthly Sales changed over time since January 2016. </font>
+        <p style="color:white;">We can obviously find a huge decrease in monthly Sales
         from September 2018 to October 2018, the time period when Burger King first introduced their "Impossible Buger". The Sales 
         dropped from $13247269 to $11374035, the biggest difference between two consecutive months. Even a year later now, our Total Monthly Sales
         have not recovered to the level of the last September. So it is reasonable to assume 
         the market responsed to the Impossible Burger fairly well and Burger King took away a part of our market share.
     </p>
-    <p> Looking closely into how each of our five regions responded to the Impossible Burger, we have not found that a particular region
+    <p style="color:white;"> Looking closely into how each of our five regions responded to the Impossible Burger, we have not found that a particular region
         suffered a siginificantly bigger or smaller decrease in Monthly Sales than the others.
         </p>
     </div>
@@ -346,17 +346,17 @@ labels: {
 </script>    
 
 
-<div style="min-width: 310px; max-width: 800px; height: 250px; margin: 0 auto">
-        Now, let's look at the data from another dimension, how different Menu Items responded.
-    <p> For the first graph, although we can detect some decrease from Sep 2018 to Oct 2018 in Chick Fillet's and Fish Fillet's Montly Sales,
+<div style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto">
+    <font color="white">Now, let's look at the data from another dimension, how different Menu Items responded.</font>
+        <p style="color:white;"> For the first graph, although we can detect some decrease from Sep 2018 to Oct 2018 in Chick Fillet's and Fish Fillet's Montly Sales,
         the decreases are fairly small and the CF and FF sales have gradually recovered since then. So let's not focus 
         on the Impossible Burger's impacts on our Chicken Fillets and Fish Fillets.
     </p>
-    <p> Our Hamburgers suffered the most significant drop from Step 2018 to Oct 2018. The Hambuger Monthly Sales changed 
+    <p style="color:white;"> Our Hamburgers suffered the most significant drop from Step 2018 to Oct 2018. The Hambuger Monthly Sales changed 
         from $7.92M to $6.78M, the largest change between any two consecutive Monthly Sales in our dataset.</p>
-    <p> In the second graph, we compare three item's Monthly Sales in September 2018 with the average of recent three months' Sales. It is obvious 
+        <p style="color:white;"> In the second graph, we compare three item's Monthly Sales in September 2018 with the average of recent three months' Sales. It is obvious 
         that HM sales are still influenced by the Impossible Burger most seriously. </p> 
-    <p> So I think Impossible Burger is the main competitor for our Hambugers. So let's dig into how each regions' Hamburgers
+        <p style="color:white;"> So I think Impossible Burger is the main competitor for our Hambugers. So let's dig into how each regions' Hamburgers
         Sales responded.
                 </p>
     </div>
@@ -398,10 +398,10 @@ labels: {
     }); 
 </script>     
 
-<div style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto">
-        From Sep 2018 to Oct 2018, NE and SW and NW suffered similar amount of decreases in their Hamburger sales, all larger than
-        the decreases in SE's and Center's HM sales. 
-    <p> So other than creating a new food item to fight Impossible Burger for market share, I would suggest we have some discount events or combos
+<div style="min-width: 310px; max-width: 800px; height: 140px; margin: 0 auto">
+    <font color="white"> From Sep 2018 to Oct 2018, NE and SW and NW suffered similar amount of decreases in their Hamburger sales, all larger than
+        the decreases in SE's and Center's HM sales.  </font>
+        <p style="color:white;"> So other than creating a new food item to fight Impossible Burger for market share, I would suggest we have some discount events or combos
         for Hamburgers, primarily in regions including NE, SW, and NW.
     </p>
     </div>
@@ -450,32 +450,32 @@ labels: {
 </script> 
 
 
-<div style="min-width: 310px; max-width: 800px; height: 500px; margin: 0 auto">
-        Now, let's look at the daily data in January 2016.
-    <p> Comparing the average daily sales of each day of the week in Jan 2016, we can tell that the five weekdays' average daily
+<div style="min-width: 310px; max-width: 800px; height: 580px; margin: 0 auto">
+    <font color="white"> Now, let's look at the daily data in January 2016.</font>
+        <p style="color:white;"> Comparing the average daily sales of each day of the week in Jan 2016, we can tell that the five weekdays' average daily
         sales are ahead of Saturday and Sunday. It is reasonable for us to assume that people would more likely to choose McDonald'
         when they go to the school or work. It is more convinient and fast to come to eat at a fast food restuarant and unfortunately we become less
         appealing when constomers have more time and choices during weekends. So if we are planning on some discount events, we should 
         choose to launch them on weekends. Therefore we can be more competitive with other restuarants during weekends.
     </p>
-    In Conclusion:
-        <p>     &nbsp;&nbsp;&nbsp;Problems Found:</p>
-        <ul>
+    <font color="white">In Conclusion:</font>
+    <p style="color:white;">    &nbsp;&nbsp;&nbsp;Problems Found:</p>
+        <ul style="color:white;">
                 <li>Burger King's Impossible Burger indeed took away a considertable part of our market share since the last October.</li>
                 <li>Especially our Hamburgers sales
                         have been impacted most heavily</li>
                 <li>More specifically, Hamburgers in NE, SW, NW suffered higher drops than the SE and Center areas.</li>
                 <li>Our sales during weekends are not as competitive as during weekdays. </li>
               </ul>
-        <p>     &nbsp;&nbsp;&nbsp;Insights Found:</p>
-        <ul>
+              <p style="color:white;">     &nbsp;&nbsp;&nbsp;Insights Found:</p>
+        <ul style="color:white;">
                 <li> Our Sales are higher during Weekdays rather than during Weekends. </li>
                  </ul>
-        <p>     &nbsp;&nbsp;&nbsp;Suggestions:</p>
-                 <ul>
+                 <p style="color:white;">    &nbsp;&nbsp;&nbsp;Suggestions:</p>
+                 <ul style="color:white;">
                          <li> Since Impossible Burgers are mainly influencing our HM sales, we could try to  update the flavors 
                              or recipes of our Hamburgers. </li>
-                        <li> We can hold discounts events for Hamburgers, primarily in regions including NE, SW, NW. </li>
+                        <li style="color:white;"> We can hold discounts events for Hamburgers, primarily in regions including NE, SW, NW. </li>
                         <li> We can hold discounts events on weekends to enhance our competitiveness during weekends.</li>
                           </ul>
 
