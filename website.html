@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+body {
+  background-image: url('McDonald’s-Logo.jpg');
+  background-color: #cccccc;
+}
+
+div {
+  background-color: Gold;
+}
+
+		</style>
+	</head>
+	<body>
+            <h1 align="center"> Data Report By Zhuoyuan Ren</h1>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code/modules/exporting.js"></script>
+<script src="https://code/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<div style="min-width: 310px; max-width: 800px; height: 130px; margin: 0 auto">
+Dear CEO,
+<p>My team have finished data visualizations and analysis you desired below. We have figured out the impact potentially caused by
+    BurgerKing's Impossible Burger in the last October and also we have some valuable insights McDonald's can benefit from.
+</p>
+<a href="report.pdf" download>Click Me to Download a PDF Version of The Following Report</a >
+</div>
+        
+        <pre id="csv" style="display:none">"Month, Year",NE,SW,NW,SE,C,Total
+                J-16,1920995,1874274,1871601,1825056,1859053,9350979
+                Feb-16,1959215,1969544,1960649,1933574,1859777,9682759
+                Mar-16,2027678,2022124,1939014,1901402,1935039,9825257
+                Apr-16,1997833,1990964,1946570,1908892,1872326,9716585
+                May-16,2108274,2082809,1979297,2013220,1937812,10121412
+                Jun-16,2091980,2023180,2033895,1997693,1927852,10074600
+                Jul-16,2140709,2095066,2015714,1977396,2034922,10263807
+                Aug-16,2205580,2250241,2139988,2164116,2122132,10882057
+                Sep-16,2153816,2127713,2124603,2131997,2071691,10609820
+                Oct-16,2168676,2170377,2135427,2089130,2055393,10619003
+                Nov-16,2234393,2247531,2162560,2130742,2125660,10900886
+                Dec-16,2133837,2143326,2111721,2110360,1999736,10498980
+                Jan-17,2301686,2260916,2248713,2216731,2164151,11192197
+                Feb-17,2453707,2419317,2357234,2306213,2287898,11824369
+                Mar-17,2339264,2300432,2299477,2283604,2214332,11437109
+                Apr-17,2359080,2328692,2237613,2242638,2225469,11393492
+                May-17,2416127,2339363,2302404,2259342,2279748,11596984
+                Jun-17,2465093,2414319,2389953,2330922,2277884,11878171
+                Jul-17,2390742,2357318,2302992,2275408,2210202,11536662
+                Aug-17,2537829,2585228,2561169,2451183,2424068,12559477
+                Sep-17,2523511,2462909,2404606,2431953,2402583,12225562
+                Oct-17,2444177,2429262,2426288,2359954,2304779,11964460
+                Nov-17,2621029,2545089,2517947,2413490,2435147,12532702
+                Dec-17,2647775,2592250,2528700,2537451,2529948,12836124
+                Jan-18,2640761,2637128,2629108,2577139,2564375,13048511
+                Feb-18,2814604,2662916,2707575,2617479,2545197,13347771
+                Mar-18,2609253,2560765,2553334,2500256,2453692,12677300
+                Apr-18,2722007,2676031,2639394,2659690,2554753,13251875
+                May-18,2832936,2804042,2704249,2668593,2678010,13687830
+                Jun-18,2641786,2599733,2615408,2485609,2497981,12840517
+                Jul-18,2742490,2688708,2637788,2630319,2639101,13338406
+                Aug-18,2786194,2736147,2754238,2666406,2599335,13542320
+                Sep-18,2720638,2710087,2670893,2586340,2559311,13247269
+                Oct-18,2320956,2288687,2288925,2223673,2251794,11374035
+                Nov-18,2560458,2526092,2416298,2376833,2419854,12299535
+                Dec-18,2373509,2352366,2239571,2306116,2267533,11539095
+                Jan-19,2593906,2524880,2557614,2491027,2391308,12558735
+                Feb-19,2506324,2537643,2434056,2401803,2398621,12278447
+                Mar-19,2507077,2446863,2419587,2384291,2316506,12074324
+                Apr-19,2496457,2540149,2403681,2396331,2413466,12250084
+                May-19,2645148,2525821,2553187,2475925,2486036,12686117
+                Jun-19,2466669,2350121,2373539,2285149,2322725,11798203
+                Jul-19,2406800,2322284,2323544,2240780,2254571,11547979
+                Aug-19,2465004,2394712,2399015,2348987,2347234,11954952
+                Sep-19,2445513,2424378,2415468,2367390,2328904,11981653
+                         
+            </pre>
+
+<pre id="csv2" style="display:none">"Month, Year",HM,CF,FF,Total
+    J-16,5598648,2352671,1399660,9350979
+    Feb-16,5840210,2394392,1448157,9682759
+    Mar-16,5909899,2461847,1453511,9825257
+    Apr-16,5799715,2455722,1461148,9716585
+    May-16,6080407,2533501,1507504,10121412
+    Jun-16,6056108,2504226,1514266,10074600
+    Jul-16,6163373,2547327,1553107,10263807
+    Aug-16,6537463,2723694,1620900,10882057
+    Sep-16,6382884,2617860,1609076,10609820
+    Oct-16,6343865,2663903,1611235,10619003
+    Nov-16,6490244,2748759,1661883,10900886
+    Dec-16,6340076,2599316,1559588,10498980
+    Jan-17,6685774,2808128,1698295,11192197
+    Feb-17,7152982,2911445,1759942,11824369
+    Mar-17,6817973,2886869,1732267,11437109
+    Apr-17,6863707,2813861,1715924,11393492
+    May-17,6964094,2878324,1754566,11596984
+    Jun-17,7167558,2962089,1748524,11878171
+    Jul-17,6840830,2944269,1751563,11536662
+    Aug-17,7497876,3173062,1888539,12559477
+    Sep-17,7352926,3063462,1809174,12225562
+    Oct-17,7170291,2987291,1806878,11964460
+    Nov-17,7549336,3096246,1887120,12532702
+    Dec-17,7707776,3186172,1942176,12836124
+    Jan-18,7887763,3234631,1926117,13048511
+    Feb-18,7990228,3328733,2028810,13347771
+    Mar-18,7654312,3139645,1883343,12677300
+    Apr-18,7947352,3285062,2019461,13251875
+    May-18,8186393,3438398,2063039,13687830
+    Jun-18,7629715,3256752,1954050,12840517
+    Jul-18,8012517,3338673,1987216,13338406
+    Aug-18,8060250,3467244,2014826,13542320
+    Sep-18,7922921,3327230,1997118,13247269
+    Oct-18,6781234,2862020,1730781,11374035
+    Nov-18,7386402,3052314,1860819,12299535
+    Dec-18,6954506,2874069,1710520,11539095
+    Jan-19,7568561,3128423,1861751,12558735
+    Feb-19,7350256,3061564,1866627,12278447
+    Mar-19,7267799,3003545,1802980,12074324
+    Apr-19,7317841,3073157,1859086,12250084
+    May-19,7620829,3175075,1890213,12686117
+    Jun-19,7124175,2921766,1752262,11798203
+    Jul-19,6956441,2852679,1738859,11547979
+    Aug-19,7190660,2995435,1768857,11954952
+    Sep-19,7142860,3023767,1815026,11981653
+</pre>
+
+<pre id="csv3" style="display:none">"Month, Year",HM-NE,HM-SW,HM-NW,HM-SE,HM-C
+    J-16,1140955,1124565,1111618,1095034,1126476
+    Feb-16,1175529,1200559,1188037,1167009,1109076
+    Mar-16,1235995,1220454,1151657,1133899,1167894
+    Apr-16,1186592,1213616,1149180,1133767,1116560
+    May-16,1272450,1249686,1187579,1215080,1155612
+    Jun-16,1235025,1213908,1239785,1217717,1149673
+    Jul-16,1284426,1269486,1202069,1186438,1220954
+    Aug-16,1323348,1358134,1283993,1319163,1252825
+    Sep-16,1284426,1268860,1295077,1279199,1255322
+    Oct-16,1280303,1315120,1301675,1233342,1213425
+    Nov-16,1319100,1348519,1276693,1257908,1288024
+    Dec-16,1280303,1306490,1287225,1266216,1199842
+    Jan-17,1381012,1356550,1341018,1316604,1290590
+    Feb-17,1480936,1451591,1428344,1405780,1386331
+    Mar-17,1381012,1358087,1393347,1378270,1307257
+    Apr-17,1429463,1411049,1329007,1358906,1335282
+    May-17,1472779,1395077,1367489,1347357,1381392
+    Jun-17,1487808,1471677,1442457,1420841,1344775
+    Jul-17,1419956,1391670,1367838,1343314,1318052
+    Aug-17,1522698,1560316,1536702,1447084,1431076
+    Sep-17,1538236,1462819,1433985,1467806,1450080
+    Oct-17,1466507,1448688,1478973,1401670,1374453
+    Nov-17,1572618,1542173,1519708,1439282,1475555
+    Dec-17,1588665,1570750,1492847,1537545,1517969
+    Jan-18,1574815,1607493,1586799,1570926,1547730
+    Feb-18,1688763,1597750,1640630,1545259,1517826
+    Mar-18,1574816,1551672,1532001,1509031,1486792
+    Apr-18,1623266,1605619,1574000,1611615,1532852
+    May-18,1672456,1709237,1622550,1601156,1580994
+    Jun-18,1559609,1534783,1569245,1491366,1474712
+    Jul-18,1671717,1587310,1566687,1603342,1583461
+    Aug-18,1654831,1625106,1662321,1574144,1543848
+    Sep-18,1606160,1642152,1618403,1536130,1520076
+    Oct-18,1380063,1351220,1351293,1334204,1364454
+    Nov-18,1551486,1524624,1440957,1417422,1451913
+    Dec-18,1446801,1419772,1343743,1383670,1360520
+    Jan-19,1581146,1499626,1534569,1518435,1434785
+    Feb-19,1503795,1537661,1460434,1432313,1416053
+    Mar-19,1519140,1444534,1474888,1453373,1375864
+    Apr-19,1488760,1524090,1442209,1414702,1448080
+    May-19,1596480,1506271,1547080,1470550,1500448
+    Jun-19,1488759,1410073,1446819,1371090,1407434
+    Jul-19,1458378,1379296,1416344,1336287,1366136
+    Aug-19,1502572,1422314,1462348,1386752,1416674
+    Sep-19,1458379,1431260,1472377,1397616,1383228    
+</pre>
+
+
+<pre id="csv4" style="display:none">"Month, Year",Sep-18,"Avg of Jul, Aug, Sep 19"
+    NE,2720638,2439104
+    SW,2710087,2380457
+    NW,2670893,2379341
+    SE,2586340,2319051
+    C,2559311,2310236
+    </pre>
+    
+<pre id="csv5" style="display:none">"Type",Sep-18,"Avg of Jul, Aug, Sep 19"
+    HM,7922921,7096651
+    CF,3327230,2957292
+    FF,1997118,1774246    
+    </pre>
+
+<pre id="csv6" style="display:none">Unnamed: 0,total_sales
+    Friday,310587.0
+    Wednesday,303959.5
+    Thursday,303729.75
+    Monday,303163.75
+    Tuesday,300023.25
+    Sunday,296574.4
+    Saturday,294333.4
+    
+        </pre> 
+
+    <pre id="csv7" style="display:none">Unnamed: 0,NE,SW,NW,SE,C
+        Monday,62547.0,60272.25,61255.0,58164.5,60925.0
+        Tuesday,62738.5,59319.25,60442.75,58320.5,59202.25
+        Wednesday,62629.25,61150.5,61153.5,59346.75,59679.5
+        Thursday,64903.0,59837.25,60937.25,58514.0,59538.25
+        Friday,59814.0,64433.0,61950.0,61971.4,62418.6
+        Saturday,58755.6,58117.0,59045.2,58740.6,59675.0
+        Sunday,63375.2,59841.4,58294.2,56822.6,58241.0
+        
+                </pre>  
+
+<div id="container2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+    <script type="text/javascript">
+            Highcharts.chart('container2', {
+
+                title: {
+                    text: 'Monthly Sales Change By Region'
+                },
+            
+                subtitle: {
+                    text: 'Data input from region_sum.csv'
+                },
+                yAxis: {
+        min: 0,
+        title: {
+            text: 'Monthly Sales ($)',
+            align: 'middle'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+                data: {
+                    csv: document.getElementById('csv').innerHTML
+                },
+            
+                plotOptions: {
+                    series: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                },
+            
+                series: [{
+                    lineWidth: 1
+                }]
+            }); 
+        </script>   
+
+<div style="min-width: 310px; max-width: 800px; height: 200px; margin: 0 auto">
+        First Let's see how Monthly Sales changed over time since January 2016. 
+    <p>We can obviously find a huge decrease in monthly Sales
+        from September 2018 to October 2018, the time period when Burger King first introduced their "Impossible Buger". The Sales 
+        dropped from $13247269 to $11374035, the biggest difference between two consecutive months. Even a year later now, our Total Monthly Sales
+        have not recovered to the level of the last September. So it is reasonable to assume 
+        the market responsed to the Impossible Burger fairly well and Burger King took away a part of our market share.
+    </p>
+    <p> Looking closely into how each of our five regions responded to the Impossible Burger, we have not found that a particular region
+        suffered a siginificantly bigger or smaller decrease in Monthly Sales than the others.
+        </p>
+    </div>
+
+<div id="container3" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+<div id="container6" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+    Highcharts.chart('container6', {
+        title: {
+            text: 'Menu Items Sales Now and Then'
+        },
+        chart: {
+        type: 'bar'
+        },
+        subtitle: {
+            text: 'Data input from burger_compare.csv'
+        },
+        yAxis: {
+min: 0,
+title: {
+    text: 'Monthly Sales ($)',
+    align: 'middle'
+},
+labels: {
+    overflow: 'justify'
+}
+},
+        data: {
+            csv: document.getElementById('csv5').innerHTML
+        },
+    
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: false
+                }
+            }
+        },
+    
+        series: [{
+            lineWidth: 1
+        }]
+    }); 
+</script> 
+
+<script type="text/javascript">
+    Highcharts.chart('container3', {
+
+        title: {
+            text: 'Monthly Sales Change By Food Item'
+        },
+    
+        subtitle: {
+            text: 'Data input from  burger_sum.csv'
+        },
+        yAxis: {
+min: 0,
+title: {
+    text: 'Monthly Sales ($)',
+    align: 'middle'
+},
+labels: {
+    overflow: 'justify'
+}
+},
+        data: {
+            csv: document.getElementById('csv2').innerHTML
+        },
+    
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: false
+                }
+            }
+        },
+    
+        series: [{
+            lineWidth: 1
+        }]
+    }); 
+</script>    
+
+
+<div style="min-width: 310px; max-width: 800px; height: 250px; margin: 0 auto">
+        Now, let's look at the data from another dimension, how different Menu Items responded.
+    <p> For the first graph, although we can detect some decrease from Sep 2018 to Oct 2018 in Chick Fillet's and Fish Fillet's Montly Sales,
+        the decreases are fairly small and the CF and FF sales have gradually recovered since then. So let's not focus 
+        on the Impossible Burger's impacts on our Chicken Fillets and Fish Fillets.
+    </p>
+    <p> Our Hamburgers suffered the most significant drop from Step 2018 to Oct 2018. The Hambuger Monthly Sales changed 
+        from $7.92M to $6.78M, the largest change between any two consecutive Monthly Sales in our dataset.</p>
+    <p> In the second graph, we compare three item's Monthly Sales in September 2018 with the average of recent three months' Sales. It is obvious 
+        that HM sales are still influenced by the Impossible Burger most seriously. </p> 
+    <p> So I think Impossible Burger is the main competitor for our Hambugers. So let's dig into how each regions' Hamburgers
+        Sales responded.
+                </p>
+    </div>
+<div id="container4" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+    Highcharts.chart('container4', {
+        title: {
+            text: 'HM Monthly Sales Change By Region'
+        },
+    
+        subtitle: {
+            text: 'Data input from HM_region.csv'
+        },
+        yAxis: {
+min: 0,
+title: {
+    text: 'Monthly Sales ($)',
+    align: 'middle'
+},
+labels: {
+    overflow: 'justify'
+}
+},
+        data: {
+            csv: document.getElementById('csv3').innerHTML
+        },
+    
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: false
+                }
+            }
+        },
+    
+        series: [{
+            lineWidth: 1
+        }]
+    }); 
+</script>     
+
+<div style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto">
+        From Sep 2018 to Oct 2018, NE and SW and NW suffered similar amount of decreases in their Hamburger sales, all larger than
+        the decreases in SE's and Center's HM sales. 
+    <p> So other than creating a new food item to fight Impossible Burger for market share, I would suggest we have some discount events or combos
+        for Hamburgers, primarily in regions including NE, SW, and NW.
+    </p>
+    </div>
+
+
+
+
+<div id="container10" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+    Highcharts.chart('container10', {
+        title: {
+            text: 'Average Sales of Each Day of Week By Region in January 2016'
+        },
+        chart: {
+        type: 'bar'
+        },
+        subtitle: {
+            text: 'Data input from weekday_sale.csv'
+        },
+        yAxis: {
+min: 0,
+title: {
+    text: 'Average Daily Sales ($)',
+    align: 'middle'
+},
+labels: {
+    overflow: 'justify'
+}
+},
+        data: {
+            csv: document.getElementById('csv6').innerHTML
+        },
+    
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: false
+                }
+            }
+        },
+    
+        series: [{
+            lineWidth: 1
+        }]
+    }); 
+</script> 
+
+
+<div style="min-width: 310px; max-width: 800px; height: 500px; margin: 0 auto">
+        Now, let's look at the daily data in January 2016.
+    <p> Comparing the average daily sales of each day of the week in Jan 2016, we can tell that the five weekdays' average daily
+        sales are ahead of Saturday and Sunday. It is reasonable for us to assume that people would more likely to choose McDonald'
+        when they go to the school or work. It is more convinient and fast to come to eat at a fast food restuarant and unfortunately we become less
+        appealing when constomers have more time and choices during weekends. So if we are planning on some discount events, we should 
+        choose to launch them on weekends. Therefore we can be more competitive with other restuarants during weekends.
+    </p>
+    In Conclusion:
+        <p>     &nbsp;&nbsp;&nbsp;Problems Found:</p>
+        <ul>
+                <li>Burger King's Impossible Burger indeed took away a considertable part of our market share since the last October.</li>
+                <li>Especially our Hamburgers sales
+                        have been impacted most heavily</li>
+                <li>More specifically, Hamburgers in NE, SW, NW suffered higher drops than the SE and Center areas.</li>
+                <li>Our sales during weekends are not as competitive as during weekdays. </li>
+              </ul>
+        <p>     &nbsp;&nbsp;&nbsp;Insights Found:</p>
+        <ul>
+                <li> Our Sales are higher during Weekdays rather than during Weekends. </li>
+                 </ul>
+        <p>     &nbsp;&nbsp;&nbsp;Suggestions:</p>
+                 <ul>
+                         <li> Since Impossible Burgers are mainly influencing our HM sales, we could try to  update the flavors 
+                             or recipes of our Hamburgers. </li>
+                        <li> We can hold discounts events for Hamburgers, primarily in regions including NE, SW, NW. </li>
+                        <li> We can hold discounts events on weekends to enhance our competitiveness during weekends.</li>
+                          </ul>
+
+    </div>
+
+    
+
+	</body>
+</html>
